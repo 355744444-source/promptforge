@@ -2,6 +2,10 @@
 
 > 把「随手问 AI」变成「结构化下指令」的桌面小工具。
 
+![主界面](docs/screenshot-main.png)
+
+**[下载 Windows 版](https://github.com/355744444-source/promptforge/releases/latest)** · 单文件 exe，双击即用，不装 Python
+
 写提示词真正难的地方，从来不是措辞客气不客气。一份能让 AI 一次交对的提示词，
 通常要有四样东西：
 
@@ -38,6 +42,8 @@ PromptForge 把这四件事做成五步表单，右边**实时**生成一段可�
 | 精简 | 角色、背景、读者、语气、风格、篇幅、格式 | 正文想自己写，只要个框架 |
 | 标准 | 上面 + 成功标准、必须包含、禁止项、结构、范例骨架、3–4 步 | 日常够用 |
 | 深入 | 上面 + 成型范例 + 反例 + 自查步骤 + 2 条深度判据 | 想直接拿去用 |
+
+![范例页](docs/screenshot-examples.png)
 
 ## 它会从你那句话里读什么
 
@@ -94,13 +100,20 @@ PromptForge 把这四件事做成五步表单，右边**实时**生成一段可�
 
 ## 运行
 
-直接双击 `提示词工坊_v1.2.0.exe`，无需安装 Python 或任何依赖。
+到 [Releases](https://github.com/355744444-source/promptforge/releases/latest) 下载 `PromptForge_v1.2.0.exe`，双击即用，无需安装 Python 或任何依赖（Windows 10/11 x64）。
 
 从源码运行：
 
 ```bash
 pip install PySide6-Essentials
 python main.py
+```
+
+自己打包：
+
+```bash
+pip install PySide6-Essentials pyinstaller
+pyinstaller --noconfirm --clean promptforge.spec
 ```
 
 ## 构建

@@ -1,0 +1,29 @@
+# UTF-8
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(1, 0, 0, 0),
+    prodvers=(1, 0, 0, 0),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x40004,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+  ),
+  kids=[
+    StringFileInfo(
+      [
+        StringTable(
+          '080404b0',
+          [StringStruct('CompanyName', '江苏振远智能科技有限公司'),
+           StringStruct('FileDescription', '提示词工坊 - 结构化 AI 提示词编写器'),
+           StringStruct('FileVersion', '1.2.0.0'),
+           StringStruct('InternalName', 'PromptForge'),
+           StringStruct('LegalCopyright', 'Copyright (C) 2026 江苏振远智能科技有限公司'),
+           StringStruct('OriginalFilename', 'PromptForge.exe'),
+           StringStruct('ProductName', '提示词工坊 PromptForge'),
+           StringStruct('ProductVersion', '1.2.0.0')])
+      ]),
+    VarFileInfo([VarStruct('Translation', [2052, 1200])])
+  ]
+)

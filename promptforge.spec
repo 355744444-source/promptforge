@@ -1,0 +1,73 @@
+# -*- mode: python ; coding: utf-8 -*-
+"""PyInstaller build definition for PromptForge (single-file windowed exe)."""
+
+excludes = [
+    "tkinter",
+    "unittest",
+    "pytest",
+    "pydoc",
+    "doctest",
+    "pdb",
+    "PIL",
+    "numpy",
+    "setuptools",
+    "pip",
+    "PySide6.QtQml",
+    "PySide6.QtQuick",
+    "PySide6.QtQuickWidgets",
+    "PySide6.QtNetwork",
+    "PySide6.QtSql",
+    "PySide6.QtTest",
+    "PySide6.QtPrintSupport",
+    "PySide6.QtSvg",
+    "PySide6.QtSvgWidgets",
+    "PySide6.QtOpenGL",
+    "PySide6.QtOpenGLWidgets",
+    "PySide6.QtDBus",
+    "PySide6.QtXml",
+    "PySide6.QtUiTools",
+    "PySide6.QtConcurrent",
+    "PySide6.QtDesigner",
+    "PySide6.QtHelp",
+    "PySide6.QtHttpServer",
+    "PySide6.QtPdf",
+    "PySide6.QtPdfWidgets",
+    "PySide6.QtWebSockets",
+]
+
+a = Analysis(
+    ["main.py"],
+    pathex=[],
+    binaries=[],
+    datas=[("assets/app.ico", "assets")],
+    hiddenimports=[],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=excludes,
+    noarchive=False,
+)
+
+pyz = PYZ(a.pure)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.datas,
+    [],
+    name="PromptForge",
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=False,
+    runtime_tmpdir=None,
+    console=False,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    version="version_info.txt",
+    icon="assets/app.ico",
+)

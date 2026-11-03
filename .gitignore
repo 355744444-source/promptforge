@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# PyInstaller 构建中间产物
+build/
+dist/
+
+# 历史版本可执行文件（正式版本走 GitHub Releases）
+archive/
+
+# 日志
+*.log
